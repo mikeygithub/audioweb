@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+  resources:
+    static-locations: /static
+  mvc:
+    view:
+      prefix:
+        "/WEB-INF/jsp/"
+      suffix:
+        ".jsp"
+    static-path-pattern: "/static/**"
+server:
+  servlet:
+    context-path: /audioweb

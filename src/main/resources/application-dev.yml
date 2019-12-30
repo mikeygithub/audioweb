@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/dbaudioweb?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: org.apache.commons.dbcp.BasicDataSource
+#    dbcp2:
+#      max-idle: 10
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.audioweb.entity,com.niocast.entity
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
